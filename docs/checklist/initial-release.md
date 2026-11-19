@@ -2,6 +2,8 @@
 
 建立日期：2026-11-19。状态：待验收。范围以[扫描设计](../notes/scan-design.md)、[实施方案](../notes/implementation-plan.md)和 ADR 0001/0002 为准。研究验证不能替代本清单。
 
+2026-11-19 补充：研究预览版已完成安装态 E2E，见[Skill 安装态 E2E](skill-e2e-2026-11-19.md)。该记录只证明当前实现能复现既定样本结论；下列首版门槛仍需逐项执行，不得因 E2E 通过而整体勾选。
+
 ## Transport 与安全边界
 
 - [ ] `verify-transport` 固定审阅路径/哈希、SDK 版本、协议/schema、工具目录和 structured response；拒绝任意工具、命令参数、提权和重试绕过。

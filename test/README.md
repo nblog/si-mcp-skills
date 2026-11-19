@@ -14,6 +14,7 @@
 | `hook-detect` | [02_scan_evidence.py](hook-detect/02_scan_evidence.py) | 离线验证相等窗口、非入口 direct jump、既有指令操作数改动、入口返回补丁、跨读取重定位和短读拒绝。 |
 | `hook-detect` | [05_table_evidence.py](hook-detect/05_table_evidence.py) | 离线验证 EAT 槽位改写、IAT 直连与转发预期地址。 |
 | `hook-detect` | [01_wxwork_export_probe.py](hook-detect/01_wxwork_export_probe.py) | 历史导出入口对照；重叠窗口会产生相邻导出归因错误，不作为 patch 发现源。 |
+| `skill-contract` | [01_cli_contract.py](skill-contract/01_cli_contract.py) | 正式 Skill 元数据、Typer 命令、显式目标、固定依赖和 65535 硬边界。 |
 
 ```powershell
 uv run --no-project --offline test/mcp-contract/01_transport_contract.py -v
@@ -21,6 +22,7 @@ uv run --no-project --offline test/pe-baseline/01_lief_layout.py -v
 uv run --no-project --offline test/inline-evidence/01_capstone_jumps.py -v
 uv run --no-project --offline test/hook-detect/02_scan_evidence.py -v
 uv run --no-project --offline test/hook-detect/05_table_evidence.py -v
+uv run --no-project --offline test/skill-contract/01_cli_contract.py -v
 uv run --no-project --offline test/mcp-contract/replay_probe.py C:/Windows/SysWOW64/KernelBase.dll LoadLibraryW
 uv run --no-project --offline test/mcp-contract/replay_probe.py C:/Windows/System32/KernelBase.dll LoadLibraryExW
 ```
@@ -44,4 +46,4 @@ uv run --no-project --offline test/hook-detect/04_wxwork_eat_iat.py --simcp '<�
 uv run --no-project --offline test/mcp-contract/transport_probe.py --simcp '<审阅后的本机绝对路径>' --sha256 '<审阅时核对的 SHA-256>'
 ```
 
-实际结果见 [2026-11-18 设计差异与验证](../.codex-tracking/research/hook-detect-design-review-2026-11-18.md)、[2026-11-19 WXWork 导出入口历史实测](../.codex-tracking/research/hook-detect-wxwork-2026-11-19.md)和 [2026-11-19 region-first 实测](../.codex-tracking/research/hook-detect-region-first-2026-11-19.md)。没有跨组辅助模块、构建产物或项目级类型检查路径；Python 缓存与历史临时运行环境由根目录 `.gitignore` 排除。
+实际结果见 [2026-11-18 设计差异与验证](../.codex-tracking/research/hook-detect-design-review-2026-11-18.md)、[2026-11-19 WXWork 导出入口历史实测](../.codex-tracking/research/hook-detect-wxwork-2026-11-19.md)、[2026-11-19 region-first 实测](../.codex-tracking/research/hook-detect-region-first-2026-11-19.md)和[安装态 Skill E2E](../docs/checklist/skill-e2e-2026-11-19.md)。没有跨组辅助模块、构建产物或项目级类型检查路径；Python 缓存与历史临时运行环境由根目录 `.gitignore` 排除。

@@ -1,6 +1,6 @@
 # 实施方案
 
-日期：2026-11-19。状态：计划；正式 `skills/hook-detect/scripts/` 未开始。测试证据见[研究验证](../checklist/research-validation-2026-11-19.md)。
+日期：2026-11-19。状态：研究预览版已实现；本文保留目标结构与剩余迁移顺序。测试与安装态 E2E 见[研究验证](../checklist/research-validation-2026-11-19.md)、[Skill E2E](../checklist/skill-e2e-2026-11-19.md)。
 
 ## 目标结构
 
@@ -29,8 +29,8 @@ skills/hook-detect/
 
 ## CLI 命令
 
-- `hook_detect.py module --pid PID --module NAME [--base ADDRESS] ...`
-- `hook_detect.py process --pid PID [--all-modules | --module NAME ...] ...`
+- `hook_detect.py module --pid PID --process-name NAME --module NAME[@BASE] ...`
+- `hook_detect.py process --pid PID --process-name NAME [--all-modules | --module NAME[@BASE] ...] ...`
 - `hook_detect.py verify-transport --simcp PATH --sha256 HASH ...`
 - `hook_detect.py replay --fixture PATH`：离线回放 MCP/PE fixture，不启动服务。
 

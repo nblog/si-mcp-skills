@@ -10,6 +10,8 @@
 4. [实施方案](notes/implementation-plan.md)：从研究入口迁移到 `skills/hook-detect/scripts/` 的文件职责、阶段和验收顺序。
 5. [首版验收清单](checklist/initial-release.md)：发布前必须逐项通过的门槛；IAT 是独立必过项。
 6. [2026-11-19 研究验证记录](checklist/research-validation-2026-11-19.md)：已执行的离线与 WXWork 实测证据，不等于发布验收。
+7. [Skill 安装态 E2E](checklist/skill-e2e-2026-11-19.md)：符号链接、`codex exec --profile custom` 与 WXWork 复现验证。
+8. [研究预览版结项](notes/implemented/2026-11-19-hook-detect-research-preview.md)：当前 Skill 的完成范围、验证入口与未达首版事项。
 
 ## 文档职责
 
@@ -17,4 +19,4 @@
 - `notes/scan-design.md` 保存当前有效的设计与契约，是实现和测试必须遵守的说明。
 - `notes/implementation-plan.md` 保存分阶段落地方案；完成阶段后把事实迁入当前说明或结项记录，避免把过程草稿当作长期设计。
 - `checklist/` 保存验收范围、命令、结果和最小证据。未执行项保持未勾选；复验新增日期记录，不覆盖历史。
-- 未来已完成任务在 `notes/implemented/` 建结项记录；被替代说明进入 `notes/archived/`。当前尚未发布正式 Skill，因此这些子目录暂不预建。
+`notes/implemented/` 保存已完成阶段性交付的结项记录；被替代说明进入 `notes/archived/`。当前完成的是研究预览版，首版发布仍未验收。
