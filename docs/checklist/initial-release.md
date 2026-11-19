@@ -2,9 +2,11 @@
 
 建立日期：2026-11-19。状态：待验收。范围以[扫描设计](../notes/scan-design.md)、[实施方案](../notes/implementation-plan.md)和 ADR 0001/0002 为准。研究验证不能替代本清单。
 
+2026-11-19 补充：研究预览版已完成安装态 E2E，见[Skill 安装态 E2E](skill-e2e-2026-11-19.md)。该记录只证明当前实现能复现既定样本结论；下列首版门槛仍需逐项执行，不得因 E2E 通过而整体勾选。
+
 ## Transport 与安全边界
 
-- [ ] `verify-transport` 固定审阅路径/哈希、SDK 版本、协议/schema、工具目录和 structured response；拒绝任意工具、命令参数、提权和重试绕过。
+- [ ] `verify-transport` 固定审阅路径/哈希，按 [ADR 0003](../adr/0003-mcp-compatibility-pin.md) 校验依赖兼容策略并记录实际依赖版本、协议/schema、工具目录和 structured response；拒绝任意工具、命令参数、提权和重试绕过。
 - [ ] 超时、取消、预算耗尽、目标变化、权限拒绝和短读均有离线与授权实测记录；不把失败写成无发现。
 - [ ] 报告和日志不包含原始内存 payload；敏感实测目标与授权范围可追溯。
 
@@ -35,7 +37,7 @@
 ## 进程覆盖与交付
 
 - [ ] 单模块与进程模式在同一固定输入上结果一致；指定模块/全部模块、共享预算、取消、失败隔离和 partial/gap 输出通过。
-- [ ] x86/WOW64 与 x64 授权实测完成，跨环境依赖版本锁定。
+- [ ] x86/WOW64 与 x64 授权实测完成，依赖满足 [ADR 0003](../adr/0003-mcp-compatibility-pin.md) 且实际解析版本已记录。
 - [ ] Typer CLI、PEP 723 依赖、Pydantic 配置、回放模式、报告 schema 和 `SKILL.md` 完成；安装或显式链接方式可复验。
 
 ## 记录规则

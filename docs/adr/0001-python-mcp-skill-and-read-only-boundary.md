@@ -1,6 +1,6 @@
 # ADR 0001：Python MCP Skill 平台与只读边界
 
-日期：2026-11-19。状态：已接受。
+日期：2026-11-19。状态：已接受；Python 依赖版本策略由 [ADR 0003](0003-mcp-compatibility-pin.md) 补充。
 
 ## 背景
 

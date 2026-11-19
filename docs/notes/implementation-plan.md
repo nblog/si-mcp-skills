@@ -1,6 +1,6 @@
 # 实施方案
 
-日期：2026-11-19。状态：计划；正式 `skills/hook-detect/scripts/` 未开始。测试证据见[研究验证](../checklist/research-validation-2026-11-19.md)。
+日期：2026-11-19。状态：研究预览版已实现；本文保留目标结构与剩余迁移顺序。测试与安装态 E2E 见[研究验证](../checklist/research-validation-2026-11-19.md)、[Skill E2E](../checklist/skill-e2e-2026-11-19.md)。
 
 ## 目标结构
 
@@ -25,12 +25,12 @@ skills/hook-detect/
       report.py
 ```
 
-`hook_detect.py` 只负责命令、参数校验、装配和输出；不得复制算法。本地库通过脚本所在目录显式加入 `sys.path`，不依赖调用者当前目录或全局 venv。依赖版本由 PEP 723 固定，后续如果拆成多文件仍保留唯一入口元数据。
+`hook_detect.py` 只负责命令、参数校验、装配和输出；不得复制算法。本地库通过脚本所在目录显式加入 `sys.path`，不依赖调用者当前目录或全局 venv。PEP 723 依赖使用 [ADR 0003](../adr/0003-mcp-compatibility-pin.md) 规定的 MCP 精确版本与分析库最低版本，并在报告中记录实际解析版本；后续如果拆成多文件仍保留唯一入口元数据。
 
 ## CLI 命令
 
-- `hook_detect.py module --pid PID --module NAME [--base ADDRESS] ...`
-- `hook_detect.py process --pid PID [--all-modules | --module NAME ...] ...`
+- `hook_detect.py module --pid PID --process-name NAME --module NAME[@BASE] ...`
+- `hook_detect.py process --pid PID --process-name NAME [--all-modules | --module NAME[@BASE] ...] ...`
 - `hook_detect.py verify-transport --simcp PATH --sha256 HASH ...`
 - `hook_detect.py replay --fixture PATH`：离线回放 MCP/PE fixture，不启动服务。
 
