@@ -2,6 +2,8 @@
 
 本目录是 `si-mcp-skills` 的正式设计基线。`test/` 与 `.codex-tracking/` 中的记录是研究证据和验收输入；进入本目录的结论必须已经与当前目标范围对齐，并在后续实现和验收中持续维护。
 
+项目总览与使用入口见仓库根目录 [README.md](../README.md) 与 [README.zh-CN.md](../README.zh-CN.md)。
+
 ## 阅读顺序
 
 1. [ADR 0001：Python MCP Skill 平台与只读边界](adr/0001-python-mcp-skill-and-read-only-boundary.md)：为什么从旧 C++ 插件迁移到 Python/MCP Skill，以及不可突破的安全边界。
