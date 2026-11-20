@@ -10,14 +10,14 @@ ms.date: 2026-11-19
 
 ## Introduction
 
-Practical agent skills built around the [System Informer](https://github.com/systeminformer/systeminformer) MCP server.
+A collection of practical agent skills built around the [System Informer](https://github.com/systeminformer/systeminformer) MCP server.
 
 | Skill | Description |
 |---|---|
-| [hook-detect](skills/hook-detect/) | Read-only scanner for PE modules in authorized Windows processes: inline patches, EAT changes, and IAT redirection. Research preview. |
+| [hook-detect](skills/hook-detect/) | Read-only scanner for Windows processes/modules: inline patches, EAT changes, and IAT redirection. |
 
 > [!CAUTION]
-> Scans require an explicitly authorized target (PID and exact process name) and a reviewed `simcp.exe`; the scanner reads memory only and never mutates processes.
+> Scans require a reviewed `simcp.exe` and an explicitly authorized target (PID and exact process name); the scanner reads memory only and never modifies processes.
 
 ## Usage
 

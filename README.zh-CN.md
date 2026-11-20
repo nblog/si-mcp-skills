@@ -14,10 +14,10 @@ ms.date: 2026-11-19
 
 | Skill | 描述 |
 |---|---|
-| [hook-detect](skills/hook-detect/) | 面向已授权 Windows 进程的 PE 模块只读扫描器：inline patch、EAT 变化与 IAT 重定向。研究预览版。 |
+| [hook-detect](skills/hook-detect/) | 对 Windows 进程/模块进行只读扫描器：inline patch、EAT 变化与 IAT 重定向。 |
 
 > [!CAUTION]
-> 扫描要求显式授权目标（PID 与精确进程名）和已审阅的 `simcp.exe`；扫描器只读内存且不修改进程。
+> 扫描要求已审阅的 `simcp.exe` 和显式授权目标（PID 与精确进程名）；扫描器只读内存且不修改进程。
 
 ## 使用
 
