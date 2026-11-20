@@ -4,6 +4,8 @@
 
 ## 目标结构
 
+以下路径以 [Codex 插件根目录](codex-plugin-packaging.md)为起点。
+
 ```text
 skills/hook-detect/
   SKILL.md

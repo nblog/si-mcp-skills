@@ -1,7 +1,7 @@
 ---
 title: si-mcp-skills
-description: Practical agent skills built around the System Informer MCP server.
-ms.date: 2026-11-19
+description: Plugins and agent skills built around the System Informer MCP server.
+ms.date: 2026-11-20
 ---
 
 [English](README.md) | [简体中文](README.zh-CN.md)
@@ -10,18 +10,24 @@ ms.date: 2026-11-19
 
 ## Introduction
 
-A collection of practical agent skills built around the [System Informer](https://github.com/systeminformer/systeminformer) MCP server.
+Plugins built around the [System Informer](https://github.com/systeminformer/systeminformer) MCP server. The current version is a research preview.
 
 | Skill | Description |
 |---|---|
-| [hook-detect](skills/hook-detect/) | Read-only scanner for Windows processes/modules: inline patches, EAT changes, and IAT redirection. |
+| [hook-detect](plugins/si-mcp-skills/skills/hook-detect/) | Read-only scanning of Windows processes and modules for inline patches, EAT changes, and IAT redirection. |
 
 > [!CAUTION]
 > Scans require a reviewed `simcp.exe` and an explicitly authorized target (PID and exact process name); the scanner reads memory only and never modifies processes.
 
-## Usage
+## Install the plugin
 
-Quick install; works with Codex, Claude Code, GitHub Copilot, and other agents:
+```powershell
+codex plugin marketplace add nblog/si-mcp-skills
+```
+
+## Install the standalone skill
+
+Codex、Claude Code, GitHub Copilot, and other compatible agents can install it through the Skills CLI.
 
 ```powershell
 npx skills add nblog/si-mcp-skills

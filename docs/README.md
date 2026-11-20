@@ -10,11 +10,13 @@
 2. [ADR 0002：region-first 检测顺序](adr/0002-region-first-detection.md)：为什么 inline 发现必须从可执行区域 diff 开始，导入/导出不能作为定位信源。
 3. [ADR 0003：MCP 精确 pin 与分析库最低版本](adr/0003-mcp-compatibility-pin.md)：MCP 暂定 `1.30.0`，分析库保留研究验证下限并记录实际解析版本。
 4. [扫描设计](notes/scan-design.md)：模块身份、PE 基线、inline、EAT、IAT、进程覆盖和输出状态的当前约束。
-5. [实施方案](notes/implementation-plan.md)：从研究入口迁移到 `skills/hook-detect/scripts/` 的文件职责、阶段和验收顺序。
+5. [实施方案](notes/implementation-plan.md)：从研究入口迁移到 Hook Detect CLI 的文件职责、阶段和验收顺序。
 6. [首版验收清单](checklist/initial-release.md)：发布前必须逐项通过的门槛；IAT 是独立必过项。
 7. [2026-11-19 研究验证记录](checklist/research-validation-2026-11-19.md)：已执行的离线与 WXWork 实测证据，不等于发布验收。
 8. [Skill 安装态 E2E](checklist/skill-e2e-2026-11-19.md)：符号链接、`codex exec --profile custom` 与 WXWork 复现验证。
 9. [研究预览版结项](notes/implemented/2026-11-19-hook-detect-research-preview.md)：当前 Skill 的完成范围、验证入口与未达首版事项。
+10. [Codex 插件封装](notes/codex-plugin-packaging.md)：仓库市场、插件目录、安装方式和运行依赖。
+11. [2026-11-20 Codex 插件验收](checklist/codex-plugin-2026-11-20.md)：本地市场安装、Skill 发现与离线入口验证。
 
 ## 文档职责
 

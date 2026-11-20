@@ -14,7 +14,7 @@ from re import fullmatch
 from pydantic import BaseModel
 
 ROOT = Path(__file__).resolve().parents[2]
-SKILL = ROOT / "skills" / "hook-detect"
+SKILL = ROOT / "plugins" / "si-mcp-skills" / "skills" / "hook-detect"
 ENTRY = SKILL / "scripts" / "hook_detect.py"
 LIBRARY = SKILL / "scripts" / "lib"
 

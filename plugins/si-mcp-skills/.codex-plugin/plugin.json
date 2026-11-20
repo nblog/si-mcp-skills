@@ -1,0 +1,22 @@
+{
+  "name": "si-mcp-skills",
+  "version": "0.1.0",
+  "description": "Read-only Windows module analysis using System Informer MCP.",
+  "author": {
+    "name": "nblog",
+    "url": "https://github.com/nblog"
+  },
+  "repository": "https://github.com/nblog/si-mcp-skills",
+  "keywords": ["windows", "system-informer", "hook-detection"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "System Informer MCP Skills",
+    "shortDescription": "Read-only Windows module analysis",
+    "longDescription": "Use Hook Detect to inspect authorized Windows modules for inline patches, export table changes, and import table redirection with a reviewed local simcp.exe.",
+    "developerName": "nblog",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Explain what Hook Detect needs before an authorized Windows module scan."
+    ]
+  }
+}

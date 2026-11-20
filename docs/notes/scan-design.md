@@ -1,6 +1,6 @@
 # 扫描设计
 
-日期：2026-11-19。状态：当前设计；`skills/hook-detect` 已有研究预览实现，首版发布仍未验收。决策依据见 [ADR 0001](../adr/0001-python-mcp-skill-and-read-only-boundary.md)和[ADR 0002](../adr/0002-region-first-detection.md)。
+日期：2026-11-19。状态：当前设计；[Hook Detect](../../plugins/si-mcp-skills/skills/hook-detect/) 已有研究预览实现，首版发布仍未验收。决策依据见 [ADR 0001](../adr/0001-python-mcp-skill-and-read-only-boundary.md)和[ADR 0002](../adr/0002-region-first-detection.md)。
 
 ## 目标与入口
 

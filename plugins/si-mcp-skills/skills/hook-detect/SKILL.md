@@ -13,4 +13,4 @@ Run the fixed Typer entry point instead of reimplementing PE parsing in chat. Th
 4. Run the entry point in this skill directory, for example `uv run --script <skill-dir>/scripts/hook_detect.py module ...`.
 5. Read [references/output.md](references/output.md) before interpreting status. A finding is code/table evidence, not a maliciousness verdict.
 
-The current implementation is a research preview, not the first-release gate: API sets use a unique-direct-export fallback and unresolved imports remain `unknown`; complete first-release criteria live in the project's `docs/checklist/initial-release.md`.
+In this research preview, API sets use a unique-direct-export fallback and unresolved imports remain `unknown`. See the repository's [first-release checklist](https://github.com/nblog/si-mcp-skills/blob/main/docs/checklist/initial-release.md) for the full criteria.
